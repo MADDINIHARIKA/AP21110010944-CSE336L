@@ -1,0 +1,14 @@
+import pandas as pd
+
+# Create a sample Series
+data = pd.Series([10, 20, 30, 40, 50])
+
+# Define the condition
+condition = data > 20
+
+# Create a subset based on the condition
+subset = data[condition]
+
+# Print the subset
+print("Subset based on condition:")
+print(subset)
