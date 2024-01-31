@@ -1,0 +1,5 @@
+import pandas as pd
+data = pd.Series(['apple', 'banana', 'orange', 'grape', 'kiwi'])
+word_lengths = data.apply(len)
+print("Number of characters in each word:")
+print(word_lengths)
