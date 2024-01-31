@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+data = {'A': [1, 2, np.inf, 4, 5],
+        'B': [np.inf, 2, 3, 4, np.inf],
+        'C': [1, 2, 3, 4, 5]}
+df = pd.DataFrame(data)
+df.replace([np.inf, -np.inf], np.nan, inplace=True)
+df.dropna(inplace=True)
+print("DataFrame after removing infinite values:")
+print(df)
