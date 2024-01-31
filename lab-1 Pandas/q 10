@@ -1,0 +1,8 @@
+import pandas as pd
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Emma'],
+        'Attempts': [3, 2, 4, 1, 2],
+        'Score': [80, 75, 90, 60, 85]}
+df = pd.DataFrame(data)
+sorted_df = df.sort_values(by=['Name', 'Score'], ascending=[False, True])
+print("Sorted DataFrame:")
+print(sorted_df)
