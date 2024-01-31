@@ -1,0 +1,15 @@
+import pandas as pd
+data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+        'Attempts': [3, 2, 4, 1],
+        'Score': [80, 75, 90, 60]}
+
+df = pd.DataFrame(data)
+new_row = {'Name': 'Emma', 'Attempts': 2, 'Score': 85}
+df = df.append(new_row, ignore_index=True)
+
+print("DataFrame with new row 'k':")
+print(df)
+df = df.drop(df.index[-1])
+
+print("\nDataFrame after deleting the new row 'k':")
+print(df)
