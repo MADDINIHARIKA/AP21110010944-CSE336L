@@ -1,0 +1,14 @@
+import pandas as pd
+
+# Create a sample Series
+data = pd.Series([1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5])
+
+# Find the most frequent value
+most_frequent_value = data.mode()[0]
+
+# Replace all other values as 'Others'
+data[data != most_frequent_value] = 'Others'
+
+# Print the modified series
+print("Modified Series:")
+print(data)
